@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 
 import Header from "./Header";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import AnimatedCursor from "react-animated-cursor";
 
 import "../styles/layout.css";
@@ -28,7 +28,7 @@ function Layout({ children }) {
     <div className="layout">
       <Header />
       {children}
-      <Footer />
+      {/* <Footer /> */}
       <AnimatedCursor
         innerSize={10}
         outerSize={40}

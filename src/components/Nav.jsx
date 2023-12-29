@@ -2,6 +2,8 @@ import { Link } from "gatsby";
 import React from "react";
 import { motion } from "framer-motion";
 
+import Resume from "../../static/Resume.pdf";
+
 export default function Nav() {
   return (
     <nav>
@@ -16,7 +18,7 @@ export default function Nav() {
           <Link to="/skills">Skills</Link>
           <Link to="/#projects">Projects</Link>
           <Link to="/blog">Blog</Link>
-          <Link to="/resume">Resume</Link>
+          <a href={Resume}>Resume</a>
           <a href="https://github.com/adityamali">Github</a>
           <a href="http://dribbble.com">Dribbble</a>
         </motion.div>

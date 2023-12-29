@@ -2,6 +2,8 @@ import React from "react";
 
 import TSBP from "../../../static/tsbp.jpg";
 import { graphql } from "gatsby";
+import { Link } from "gatsby";
+import { motion } from "framer-motion";
 
 function Project() {
   const projects = [
@@ -31,10 +33,20 @@ function Project() {
     <div className="projects" id="projects">
       <h2>Projects</h2>
       <div className="projectsWrap">
-        <div className="tsbpImg mega-project">
+        <motion.div
+          className="tsbpImg mega-project"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "linear" }}
+        >
           <img src={TSBP} alt="The SuperBike Project" />
-        </div>
-        <div className="tsbpText mega-project">
+        </motion.div>
+        <motion.div
+          className="tsbpText mega-project"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "linear" }}
+        >
           <div className="Text">
             <h2>The SuperBike Project</h2>
             <p>
@@ -43,9 +55,18 @@ function Project() {
               The application is built using the MERN stack and utilizes Redux,
               React, Node, Express, MongoDB, JWT, and more.
             </p>
+            <br />
+            <Link to="/projects/tsbp">
+              <button>Learn More</button>
+            </Link>
           </div>
-        </div>
-        <div className="project2Text mega-project">
+        </motion.div>
+        <motion.div
+          className="project2Text mega-project"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "linear" }}
+        >
           <div className="Text">
             <h2>The SuperBike Project</h2>
             <p>
@@ -54,14 +75,28 @@ function Project() {
               The application is built using the MERN stack and utilizes Redux,
               React, Node, Express, MongoDB, JWT, and more.
             </p>
+            <br />
+            <Link to="/projects/tsbp">
+              <button>Learn More</button>
+            </Link>
           </div>
-        </div>
-        <div className="project2Img mega-project">
+        </motion.div>
+        <motion.div
+          className="project2Img mega-project"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "linear" }}
+        >
           <img src={TSBP} alt="The SuperBike Project" />
-        </div>
+        </motion.div>
         <div className="allProjects">
           {projects.map((project) => (
-            <div className="project">
+            <motion.div
+              className="project"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "linear" }}
+            >
               <div className="projectImg">
                 <img
                   src={project.img}
@@ -73,7 +108,7 @@ function Project() {
                 <h3>{project.name}</h3>
                 <p>{project.desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

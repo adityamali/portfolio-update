@@ -9,4 +9,8 @@
  */
 module.exports = {
   plugins: [],
+  siteMetadata: {
+    title: "Aditya Mali",
+    description: "Aditya Mali's Portfolio",
+  }
 }

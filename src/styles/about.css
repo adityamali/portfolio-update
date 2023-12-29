@@ -1,0 +1,67 @@
+Nav {
+    background-color: #fff;
+    color: #000;
+}
+
+.about-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-dialogue {
+    margin: 10rem auto;
+    grid-gap: 20px;
+    background-color: #fff;
+    padding: 2em 5em;
+    width: 80%;
+}
+
+.about-dialogue .h-wrap h1 {
+    font-size: 2em;
+    font-weight: 200;
+    padding-bottom: 1rem;
+}
+
+.about-dialogue p {
+    text-align: justify;
+}
+
+#about-img {
+    height: 16rem;
+    aspect-ratio: 4/5;
+    float: left;
+    margin: 0 1rem 0.25em 0;
+}
+
+#img2 {
+    height: 16rem;
+    aspect-ratio: 10/5;
+    float: right;
+    margin: 0 0 0.25em 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .about-dialogue {
+        width: 100%;
+        border-radius: 1em;
+        padding: 2em 2em;
+        margin: 5rem 0 auto 0;
+    }
+
+    #about-img {
+        /* height: 12rem; */
+        width: 100%;
+        margin: 0 1rem 0.25em 0;
+    }
+
+    #img2 {
+        height: 12rem;
+        max-width: 100%;
+        float: right;
+        margin: 0 0 0.25em 1rem;
+    }
+}

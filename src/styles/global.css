@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+:root {
+    --background: #FFF9F4;
+    --white: #FFFFFF;
+    --gray-line: #DCDDE0;
+    --text: #423118;
+    --text-highlight: #B3B9FF;
+    --title: #2E384D;
+    --dark: #0E0E2C;
+    --accent: #DF84FF;
+    --accent-secondary: #FFDFDF;
+    --water: #ECF1F4;
+    --water-border: #ebf0f2;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: Helvetica, sans-serif;
+}
+
+.header-logo {
+    width: 100vw;
+    height: 2em;
+    display: flex;
+    padding: 2em 2em;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.open-nav {
+    font-size: 3rem;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 9999;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 9999;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 3em;
+    /* color: #818181; */
+    display: block;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.social {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.social a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    /* color: #818181; */
+    /* display: block; */
+    transition: 0.3s;
+    z-index: 9999;
+
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+footer {
+    width: 100vw;
+    height: 2em;
+    display: flex;
+    /* padding: 2em 0; */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.logo-img {
+    width: 3em;
+    height: 2em;
+}
+
+.nav {
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 85%;
+    left: 5%;
+
+}
+
+.nav .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50em;
+}
+
+.nav .links a {
+    padding: 1em 2em;
+    border-radius: 2em;
+    border: solid 1px transparent;
+    transition: all cubic-bezier(0.81, 0.18, 0.46, 0.71) 0.3s;
+}
+
+.nav .links a:hover {
+    background: var(--water);
+    border: solid 1px var(--water-border);
+    color: var(--dark);
+    box-shadow: inset 5px 4px 4px 0px var(--white);
+}
+
+h1 {
+    font-weight: 200;
+}
+
+h2 {
+    font-family: 'Galada', cursive;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--text);
+    color: var(--white);
+    font-weight: 600;
+    transition: filter 0.2s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-thumb {
+    background: var(--title);
+}
+
+
+/* React Modal */

@@ -24,6 +24,11 @@ main {
     padding: 0em 2rem;
 }
 
+.hero h1 {
+    position: relative;
+    z-index: 1;
+}
+
 .hero #profile {
     height: 30vh;
     width: auto;
@@ -32,7 +37,10 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    transform: translateY(-3%);
+    z-index: -1;
 }
+
 
 .quote {
     display: flex;

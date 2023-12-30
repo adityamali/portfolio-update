@@ -27,7 +27,7 @@ body {
     background: var(--background);
     color: var(--text);
     font-family: Helvetica, sans-serif;
-    cursor: none;
+    /* cursor: none; */
 }
 
 ::selection {
@@ -43,6 +43,14 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+}
+
+.colorChange {
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .open-nav {
@@ -162,11 +170,12 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 50em;
+    width: auto;
+    gap: 1em;
 }
 
 .nav .links a {
-    padding: 1em 2em;
+    padding: 1em 1.5em;
     border-radius: 2em;
     border: solid 1px transparent;
     transition: all cubic-bezier(0.81, 0.18, 0.46, 0.71) 0.3s;
@@ -177,6 +186,18 @@ footer {
     border: solid 1px var(--water-border);
     color: var(--dark);
     box-shadow: inset 5px 4px 4px 0px var(--white);
+}
+
+.nav #work {
+    border-radius: 5px;
+    background: var(--text);
+    color: var(--white);
+}
+
+.nav #work:hover {
+    box-shadow: none;
+    background: var(--accent);
+    color: var(--white);
 }
 
 h1 {

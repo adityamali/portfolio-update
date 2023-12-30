@@ -1,11 +1,22 @@
 import React from "react";
 import { Link } from "gatsby";
+import { useState } from "react";
 
 import "../styles/global.css";
 
 import logo from "../../static/logo.png";
 
 export default function Header() {
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavbarColor);
+
   //   const openNavStyle = { cursor: "pointer" };
 
   //   const openNav = () => {
@@ -17,8 +28,8 @@ export default function Header() {
   //   };
 
   return (
-    <div className="header-logo">
-      {/* <div id="myNav" class="overlay">
+    <div className={colorChange ? "header-logo colorChange" : "header-logo"}>
+      {/* <div id="myNav" class="overlay"1>
         <a
           href="javascript:void(0)"
           class="closebtn"

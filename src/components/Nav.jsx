@@ -15,12 +15,15 @@ export default function Nav() {
           transition={{ duration: 1 }}
         >
           <Link to="/about">About</Link>
-          <Link to="/skills">Skills</Link>
           <Link to="/#projects">Projects</Link>
           <Link to="/blog">Blog</Link>
           <a href={Resume}>Resume</a>
           <a href="https://github.com/adityamali">Github</a>
-          <a href="http://dribbble.com">Dribbble</a>
+          <a href="https://dribbble.com/theadityamali">Dribbble</a>
+          <a href="https://www.linkedin.com/in/adityamali/">LinkedIn</a>
+          <Link to="/work" id="work">
+            Work With Me
+          </Link>
         </motion.div>
       </div>
     </nav>

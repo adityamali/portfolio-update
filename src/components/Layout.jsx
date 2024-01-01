@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import Header from "./Header";
+import Header from "./Header.jsx";
 // import Footer from "./Footer";
 import AnimatedCursor from "react-animated-cursor";
 

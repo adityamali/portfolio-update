@@ -3,7 +3,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout.jsx";
 
 import "../styles/blog-page.css";
 import "../styles/global.css";

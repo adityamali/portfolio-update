@@ -1,11 +1,11 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
-import Layout from "../components/Layout";
-import Nav from "../components/Nav";
-import Hero from "../components/homeSections/hero";
-import Quote from "../components/homeSections/quote";
-import Project from "../components/homeSections/project";
+import Layout from "../components/Layout.jsx";
+import Nav from "../components/Nav.jsx";
+import Hero from "../components/homeSections/hero.jsx";
+import Quote from "../components/homeSections/quote.jsx";
+import Project from "../components/homeSections/project.jsx";
 
 import "../styles/global.css";
 import "../styles/home.css";

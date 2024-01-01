@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../styles/global.css";
 
@@ -8,14 +8,16 @@ import logo from "../../static/logo.png";
 
 export default function Header() {
   const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavbarColor);
+  useEffect(() => {
+    const changeNavbarColor = () => {
+      if (window.scrollY >= 80) {
+        setColorchange(true);
+      } else {
+        setColorchange(false);
+      }
+    };
+    window.addEventListener("scroll", changeNavbarColor);
+  }, []);
 
   //   const openNavStyle = { cursor: "pointer" };
 

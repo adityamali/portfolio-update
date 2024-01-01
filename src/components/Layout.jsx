@@ -1,11 +1,14 @@
 import React from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Header from "./Header";
 // import Footer from "./Footer";
 import AnimatedCursor from "react-animated-cursor";
 
 import "../styles/layout.css";
+
+const isBrowser = typeof window !== "undefined";
 
 var drawRipple = (ev) => {
   var x = ev.clientX;
@@ -21,7 +24,9 @@ var drawRipple = (ev) => {
 function Layout({ children }) {
   useEffect(() => {
     const ripple = document.querySelector(".ripple");
-    window.addEventListener("click", drawRipple);
+    if (isBrowser) {
+      window.addEventListener("click", drawRipple);
+    }
   }, []);
 
   return (

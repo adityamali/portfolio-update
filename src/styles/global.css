@@ -172,6 +172,9 @@ footer {
     align-items: center;
     width: auto;
     gap: 1em;
+    background: var(--white);
+    border-radius: 2em;
+    padding-right: 5em;
 }
 
 .nav .links a {
@@ -189,9 +192,13 @@ footer {
 }
 
 .nav #work {
-    border-radius: 5px;
+    border-radius: 5em;
     background: var(--text);
     color: var(--white);
+    position: absolute;
+    /* bottom: 50%; */
+    right: -10%;
+    border: solid 3px var(--background);
 }
 
 .nav #work:hover {

@@ -31,10 +31,10 @@ function Blog() {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. In
               laudantium iure officia.
             </h1>
-            <p id="subtitle">
+            {/* <p id="subtitle">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               voluptates, quia, tempore, quos voluptatum volu
-            </p>
+            </p> */}
             <br />
             <div className="featured-img">
               <img

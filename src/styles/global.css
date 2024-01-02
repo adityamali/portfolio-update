@@ -11,7 +11,7 @@
     --dark: #0E0E2C;
     --accent: #df84ff;
     --accent-secondary: #FFDFDF;
-    --water: #ECF1F4;
+    --water: #e9f6ff;
     --water-border: #ebf0f2;
 
 }
@@ -48,8 +48,10 @@ body {
 }
 
 .colorChange {
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+    /* backdrop-filter: blur(5px); */
+    /* box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25); */
+    background: var(--background);
+    /* background: linear-gradient(180deg, #FFF9F4 10%, rgba(0, 0, 0, 0) 100%); */
 
 }
 
@@ -173,22 +175,23 @@ footer {
     width: auto;
     gap: 1em;
     background: var(--white);
-    border-radius: 2em;
+    border: solid 10px var(--background);
+    border-radius: 10em;
     padding-right: 5em;
 }
 
 .nav .links a {
     padding: 1em 1.5em;
     border-radius: 2em;
+    transition: all cubic-bezier(0.81, 0.18, 0.46, 0.71) 0.2s;
     border: solid 1px transparent;
-    transition: all cubic-bezier(0.81, 0.18, 0.46, 0.71) 0.3s;
 }
 
 .nav .links a:hover {
     background: var(--water);
-    border: solid 1px var(--water-border);
     color: var(--dark);
     box-shadow: inset 5px 4px 4px 0px var(--white);
+    border: solid 1px var(--water-border);
 }
 
 .nav #work {
@@ -198,7 +201,8 @@ footer {
     position: absolute;
     /* bottom: 50%; */
     right: -10%;
-    border: solid 3px var(--background);
+    border: solid 10px var(--background);
+    transform: scale(1.2);
 }
 
 .nav #work:hover {

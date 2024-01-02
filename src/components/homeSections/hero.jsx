@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
 
-import pfp from "../../../static/pfp.jpg";
+import pfp from "../../../static/pfp.jpeg";
 
 function Hero() {
   return (

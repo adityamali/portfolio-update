@@ -8,7 +8,24 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  plugins: [
+    /*
+     * Gatsby's data processing layer begins with “source”
+     * plugins. Here the site sources its data from WordPress.
+     */
+    // highlight-start
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        /*
+         * The full URL of the WordPress site's GraphQL API.
+         * Example : 'https://www.example-site.com/graphql'
+         */
+        url: `http://localhost:10008/graphql`,
+      },
+    },
+    // highlight-end
+  ],
   siteMetadata: {
     title: "Aditya Mali",
     description: "Aditya Mali's Portfolio",

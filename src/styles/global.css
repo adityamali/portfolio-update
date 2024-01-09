@@ -31,7 +31,7 @@ body {
 }
 
 ::selection {
-    /* color: var(--white); */
+    color: var(--white);
     background: var(--accent);
 }
 

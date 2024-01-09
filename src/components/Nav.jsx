@@ -16,7 +16,8 @@ export default function Nav() {
         >
           <Link to="/about">About</Link>
           <Link to="/#projects">Projects</Link>
-          <Link to="/blog">Blog</Link>
+          <Link to="/blogTemplate">Blog</Link>
+          {/* <a href="localhost:8001/">Blog</a> */}
           <a href={Resume}>Resume</a>
           <a href="https://github.com/adityamali">Github</a>
           <a href="https://dribbble.com/theadityamali">Dribbble</a>

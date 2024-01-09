@@ -1,33 +1,35 @@
 import React from "react";
 
 import TSBP from "../../../static/tsbp.jpg";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
 
 function Project() {
-  const projects = [
-    {
-      name: "project1",
-      img: TSBP,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores aut illum dolor vel, consequuntur cupiditate quisquam dignissimos molestias vero numquam?",
-    },
-    {
-      name: "project2",
-      img: TSBP,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores aut illum dolor vel, consequuntur cupiditate quisquam dignissimos molestias vero numquam?",
-    },
-    {
-      name: "project3",
-      img: TSBP,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores aut illum dolor vel, consequuntur cupiditate quisquam dignissimos molestias vero numquam?",
-    },
-    {
-      name: "project4",
-      img: TSBP,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores aut illum dolor vel, consequuntur cupiditate quisquam dignissimos molestias vero numquam?",
-    },
-  ];
+  const data = useStaticQuery(graphql`
+    query Projects {
+      allWpProject {
+        nodes {
+          title
+          excerpt
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const projectsData = data.allWpProject.nodes;
+
+  console.log(projectsData);
+
+  projectsData.forEach((project) => {
+    let imageUrl = project.featuredImage.node.sourceUrl;
+    console.log(imageUrl); // This will log the sourceUrl of each project's featured image
+  });
 
   return (
     <div className="projects" id="projects">
@@ -90,23 +92,23 @@ function Project() {
           <img src={TSBP} alt="The SuperBike Project" />
         </motion.div>
         <div className="allProjects">
-          {projects.map((project) => (
+          {projectsData.map((project) => (
             <motion.div
               className="project"
               initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "linear" }}
             >
               <div className="projectImg">
                 <img
-                  src={project.img}
-                  alt={project.name}
+                  src={project.featuredImage.node.sourceUrl}
+                  alt={project.title}
                   className="project-Img"
                 />
               </div>
               <div className="project-Text">
-                <h3>{project.name}</h3>
-                <p>{project.desc}</p>
+                <h3>{project.title}</h3>
+                <p>{project.excerpt}</p>
               </div>
             </motion.div>
           ))}

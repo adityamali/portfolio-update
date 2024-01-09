@@ -19,19 +19,19 @@ export default function Header() {
     window.addEventListener("scroll", changeNavbarColor);
   }, []);
 
-  //   const openNavStyle = { cursor: "pointer" };
+  const openNavStyle = { cursor: "pointer" };
 
-  //   const openNav = () => {
-  //     document.getElementById("myNav").style.width = "100%";
-  //   };
+  const openNav = () => {
+    document.getElementById("myNav").style.width = "100%";
+  };
 
-  //   const closeNav = () => {
-  //     document.getElementById("myNav").style.width = "0%";
-  //   };
+  const closeNav = () => {
+    document.getElementById("myNav").style.width = "0%";
+  };
 
   return (
     <div className={colorChange ? "header-logo colorChange" : "header-logo"}>
-      {/* <div id="myNav" class="overlay"1>
+      <div id="myNav" class="overlay">
         <a
           href="javascript:void(0)"
           class="closebtn"
@@ -54,11 +54,11 @@ export default function Header() {
           <a href="http://dribbble.com">Dribbble</a>
           <a href="http://linkedin.com">LinkedIn</a>
         </div>
-      </div> */}
+      </div>
       <Link to="/">
         <img src={logo} className="logo-img" alt="" />
       </Link>
-      {/* <span
+      <span
         className="open-nav"
         style={openNavStyle}
         role="button"
@@ -68,7 +68,7 @@ export default function Header() {
         }}
       >
         &#9776;
-      </span> */}
+      </span>
     </div>
   );
 }

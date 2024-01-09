@@ -11,7 +11,7 @@ import "../styles/global.css";
 import "../styles/home.css";
 
 import Vec from "../../static/Vector.svg";
-import TSBP from "../../static/tsbp.jpg";
+// import TSBP from "../../static/tsbp.jpg";
 
 export default function Home() {
   const duration = "duration : 0.5";
@@ -38,3 +38,4 @@ export default function Home() {
     </Layout>
   );
 }
+

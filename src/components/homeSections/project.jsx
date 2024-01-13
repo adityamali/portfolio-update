@@ -108,7 +108,7 @@ function Project() {
               </div>
               <div className="project-Text">
                 <h3>{project.title}</h3>
-                <p>{project.excerpt}</p>
+                <p dangerouslySetInnerHTML={{ __html: project.excerpt }}></p>
               </div>
             </motion.div>
           ))}

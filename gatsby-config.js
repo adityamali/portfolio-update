@@ -21,7 +21,7 @@ module.exports = {
          * The full URL of the WordPress site's GraphQL API.
          * Example : 'https://www.example-site.com/graphql'
          */
-        url: `https://adportfoliocms.000webhostapp.com/graphql`,
+        url: `https://amportfoliocms.000webhostapp.com/graphql`,
       },
     },
     // highlight-end

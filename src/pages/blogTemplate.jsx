@@ -54,7 +54,7 @@ function Blog({ data }) {
 
 export const query = graphql`
   query Post {
-    wpPost(id: { eq: "cG9zdDozOA==" }) {
+    wpPost(id: { eq: "cG9zdDox" }) {
       title
       content
       featuredImage {
